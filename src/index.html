@@ -7,8 +7,18 @@
   <title>Domeeni registreerimise vorm</title>
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500;600;700&display=swap');
 
+    .form-control:focus {
+      border-color: #AFCAFF !important;
+      box-shadow: 0 0 5px #AFCAFF !important;
+    }
+
+    #main {
+      background-color: rgba(78, 170, 255, 0.21);
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
 
     #title {
       font-family: 'Spline Sans Mono', monospace;
@@ -20,10 +30,15 @@
 
     #navigation {
       font-family: 'Spline Sans Mono', monospace;
-      font-weight: 400;
+      font-weight: 300;
       text-align: center;
-      margin: 40px;
-      font-size: 17px;
+      font-size: 16px;
+      background-color: rgba(217, 217, 217, 0.31);
+      margin-right: 500px;
+      margin-left: 500px;
+      margin-bottom: 40px;
+      word-spacing: 50px;
+      box-shadow: 1px 1px 2px grey;
     }
 
     #description {
@@ -37,42 +52,218 @@
     #searchbar {
       text-align: center;
       width: 700px;
+      margin-top: 50px;
     }
 
+    #searchbutton01 {
+      width: 100px;
+      font-family: 'Spline Sans Mono', monospace;
+      background-color: #6184FF;
+      color: white;
+    }
+
+    #searchbutton01:hover {
+      background-color: #7795ff;
+    }
+
+    #searchbutton01:active {
+      background-color: #3b66ff;
+    }
+
+    #dropdown01 {
+      width: 100px;
+      font-family: 'Spline Sans Mono', monospace;
+      background-color: #AFCAFF;
+      color: rgba(84, 84, 84, 1);
+      outline: none;
+    }
+
+    #o0, #o1, #o2, #o3, #o4 {
+      background-color: white;
+    }
+
+    #placeholder01 {
+      font-family: 'Spline Sans Mono', monospace;
+      font-weight: 300;
+    }
+
+    #bottom {
+      font-family: 'Spline Sans Mono', monospace;
+      font-weight: 300;
+      text-align: center;
+      padding-right: 250px;
+      padding-left: 220px;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    #firstRow, #secondRow, #thirdRow, #fourthRow, #fifthRow, #sixthRow {
+      padding: 7px;
+    }
+
+    #ee01, #eu01, #com01, #net01, #org01 {
+      color: #0038FF;
+    }
+    
   </style>
 
 </head>
 
 <body>
 
-  <div class="container-fluid">
+  <div id="main" class="container-fluid">
 
-    <p id="navigation"> Domeeni Registreerimine Detailid Makse </p>
+    <p id="navigation"> <b> DomeeniRegistreerimine </b> Detailid Makse </p>
 
     <h1 id="title"> Domeeni Registreerimine </h1>
 
-    <p id="description"> Domeeniotsing aitab teil leida vaba internetiaadressi - meie valikus on .ee, <br> .eu, .com ja enamik teisi Euroopa riikide domeene ja tippdomeene, üle 360 valiku. </p>
+    <p id="description"> Domeeniotsing aitab teil leida vaba internetiaadressi - meie valikus on .ee, <br> .eu, .com ja
+      enamik teisi Euroopa riikide domeene ja tippdomeene, üle 360 valiku. 
+    </p>
 
     <div id="searchbar" class="input-group mb-3 container-fluid">
 
-      <input type="text" class="form-control" placeholder="Sisestage domeeninimi" aria-describedby="basic-addon2">
+      <input type="text" class="form-control" id="placeholder01" placeholder="Sisestage domeeninimi">
 
-      <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropdown</span>
-      </button>
+      <select class="border-0" id="dropdown01">
 
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="#">.ee</a></li>
-        <li><a class="dropdown-item" href="#">.eu</a></li>
-        <li><a class="dropdown-item" href="#">.com</a></li>
-        <li><a class="dropdown-item" href="#">.net</a></li>
-        <li><a class="dropdown-item" href="#">.org</a></li>
-  
-      </ul>
+        <option id="o0" selected> .ee </option>
+        <option id="o1" value="1"> .eu </option>
+        <option id="o2" value="2"> .com </option>
+        <option id="o3" value="3"> .net </option>
+        <option id="o4" value="4"> .org </option>
+
+      </select>
+
+      <button type="button" class="btn btn-outline-secondary border-0" id="searchbutton01">OTSI</button>
 
     </div> <!-- searchbar/container-fluid -->
 
   </div> <!-- main/container-fluid -->
+
+  <div id="bottom" class="container">
+
+    <div id="firstRow" class="row border-top">
+
+      <div class="col">
+        TLD
+      </div>
+      <div class="col">
+        Periood
+      </div>
+      <div class="col">
+        Registreerimistasu
+      </div>
+      <div class="col">
+        Uuendustasu
+      </div>
+      <div class="col">
+        Ülekandetasu
+      </div>
+
+    </div>
+
+    <div id="secondRow" class="row border-top">
+
+      <div id="ee01" class="col">
+        .ee
+      </div>
+      <div class="col">
+        1-10 aastat
+      </div>
+      <div class="col">
+        8.37 €
+      </div>
+      <div class="col">
+        8.37 €
+      </div>
+      <div class="col">
+        0.00 €
+      </div>
+
+    </div>
+
+    <div id="thirdRow" class="row border-top">
+
+      <div id="eu01" class="col">
+        .eu
+      </div>
+      <div class="col">
+        1-10 aastat
+      </div>
+      <div class="col">
+        3.00 €
+      </div>
+      <div class="col">
+        4.00 €
+      </div>
+      <div class="col">
+        4.00 €
+      </div>
+
+    </div>
+
+    <div id="fourthRow" class="row border-top">
+
+      <div id="com01" class="col">
+        .com
+      </div>
+      <div class="col">
+        1-10 aastat
+      </div>
+      <div class="col">
+        11.60 €
+      </div>
+      <div class="col">
+        11.60 €
+      </div>
+      <div class="col">
+        11.60 €
+      </div>
+
+    </div>
+
+    <div id="fifthRow" class="row border-top">
+
+      <div id="net01" class="col">
+        .net
+      </div>
+      <div class="col">
+        1-10 aastat
+      </div>
+      <div class="col">
+        14.20 €
+      </div>
+      <div class="col">
+        14.20 €
+      </div>
+      <div class="col">
+        14.20 €
+      </div>
+
+    </div>
+
+    <div id="sixthRow" class="row border-top border-bottom">
+
+      <div id="org01" class="col">
+        .org
+      </div>
+      <div class="col">
+        1-10 aastat
+      </div>
+      <div class="col">
+        12.90 €
+      </div>
+      <div class="col">
+        12.90 €
+      </div>
+      <div class="col">
+        12.90 €
+      </div>
+
+    </div>
+
+  </div> <!-- bottom/container-fluid -->
 
 </body>
 
